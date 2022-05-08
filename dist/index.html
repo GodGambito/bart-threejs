@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.b7ce2032.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFlklEQVRYR71Xe2xTVRj/ndut7QZxEzBkBLZ1D+hWReg6RqKIRFRAQA1siJqIMBgPmROGTxJAoobHHDiB4XiEEBAGSgjLBN8SE2HrNhdoV6RdYVPYHxZExrp2a6/fuXVduz7ozPBLmnvvOd/jd873O993yhCh/GC1KuMc4lOiCPqJOkBMAVj8v+Z/0bOZfnWiKHzdHoszU1Sqzkhcs7spGQytQ+xwFotAAWMYcjd9zzyzQRQ/c7U7S3JyMmzhbMIC0F80vwJBKKHVDo0ssL8Wgb7BmLhKl5F2IJR9UAAGg0HeKSh303Yv+C+BA23YgRhRtUSjYc6+cwEAqi9fVgzvEk4Q+ukDE9zjRWTsdHyU67n09HSHr9++AJi+yXIQIl4ayOBeXyIO6zSpL3M8PWN+AGqbzAVMZOX3JHiPU0FYplOrvDG8APRGYwKgMJHeffcSAC39tqOzS/2oVn1NOi89wWqNlk/pY8W9DO7je6cuM1WKJQFosFrjXR3uP+gr9v8BwDrs3bKRk8Ym3ZQA1JssC91u7OXvtTXn8cWxSjg67UhOScFjk6dg3HgtGFWh/ghVS/zaUI+zP/2IK80WKJQxmJObh+wJOZ5TAZafnZmyV/Kqb2qupMqV63Q6sbwgn4L7V9HRo8cgv2AZEkaMiAhD2/XrqNi9C79d4pTqFYVCgR2794A/CcFxOhG5HgBGyxV6JNlsf6LoteVBgyhjYrBi5evSboSTxoYG7CjbBrvdHlSttGwnhg0bxudaiAdJjBeeB7qEO4RE5nK5sGzxwpDGMpkMhUWrodVRLwoi9XV6fFJaAu4nmPBFlFfsA/dDOXXdbmOD2bkLzcOjZGJbj0FF+U4pb6FELldg3fsbkZiU7KfScvUqNqxbC6fDr9D56Uya/DiWLO3dYbcoJAQAaLt+De+8WYzu7u6QIEaOHIWNH21CVFSUpOMi3bXvvoXfW1tD2nDdDzdvRUJCL48kAHq9PpoNuv82kZaY4ZGTJ77E8cojYXO9YNFiPDH1SUnn+2+/wf69FWH15+bNw7PPz/HVcaLj5mCJhFSEaunFm1g3ncmybR9DX1sT0mliYhI+2LRFmn/v7TXgKQglWbpsFL6xmjq74KtSRyTUeQAYLOvpmK/zne3q6pJANNTXBfXL60L5nv1SJSvIf5VOsbe/+OnzU1NYtArRcrnfOJlvyMpIXe+phE3W5G7RbeYnwVfLTWyuPPo5qqtOBQ2wixjN69PS/IUBIDnAGc/MQu4L8z2s9xGC6pILsvSH1clW315wkD54qwwQi/kyjh09AqPhohfIhJyJWEkr41K2vRQ1536R3nngTI0Gc/PmIy09PXhWGA7pMqS23NuM9BZLIhww0tigULm02WxouWKFMiYWY9Rqb045Zy6ZTOi0dyApWYUhQ8Pd4NgdYoJGm5kikcavwOsN5kJawvZQAAZovIjI543hB4CIxPTG5pO0i7MGKFhfN1VZGSmzKU3Bb0Rcm1IRByd+pmbxYDAQnO28zsfG+nduPqZUKsN1TQNVmkd0qam3fP0G7bE1F8yjBBk7S4rJfUF8VV2Fo4cP4enpM/DQ2HHSKbjQ2Igzp6sxb/6LmDZjZiBuEVfdCnHShLS0gFIZssmfbzSphOjo70hB5evRYjajdOtm3LrF/wz1SlxcPIqK1yAtLYD5VrHbNTV77Gj+zylAwt4y6k0tI9xuZxVxdbyvpcPRifq6OrS2eKrfKKqK47VZUgr8hTUIQtRMrTpRuv/1GwA3aGxrG9R1o30fgcjrDzEZWOXfon3RFI2mPZxdxPcsvcGylPK9heg7OCwQEXcEGYq16tSIrvcRA+BBz5tMKplbXkr3qdn02deWDoh4Si6LKuIlNtLd6heAHqd1RutEN9yFVNGm0eWSoIinBbjLtBnpnnrcD/kHEtIAOUhVaCwAAAAASUVORK5CYII=">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcklEQVQ4T5VSS0xTURA98yg/QzcWXPFrEWNrjChtdGGUKKImRlEWbgyJC6PRjQgqAjYI0pAW0BXRuDCRlQsIqIkixIK4UCmIn7ZGbMvPhQHc1ARS6rvee2NfWqJG72rmzMyZmTuHsOq98gc2JDGcJVAZwEwizBhCIPT/IHRuNxd8ii+hmMMYo/GPQTtPrudY8mriX/4KY6rDall/jYiYwDSCUX/gFodO/6EwASbC7WJzwRmNYMwbPMGIdf1LsTYxqNJmMXWR2+3WZazLCfKRcv6HgOfOhr+aTDTuDeyNMnWwudGOb4sL2LmrBEfKjyIlNTWBLxKJoK+3By+Gh7HWYMDVxiboSCml197JK9GVqOPUyUqoqiqL8vKNuFzXAL1eL/1wOAyn4zqmpkLSVxQFd+7e401S6sjj/ewCUc3NdhfGPKNaV4tlE2ob7NJvbWmGz/tBixVbbThffZGfgNrI4w9cAEP7wvw87PW1slvsVdVckuaNNqeGiamaWlqRmZUlblhNnnehjdCpPnHSmekpdLicWOR/Id6hw+Xyzg8f9ErfYMiEIM3LzxcuQ5JikToY9QW6uXFM2EtLS3g2OIDZmWlJIBge9fUiJzcXe0rLkJ6eLsm4Fnq4Fiokwcu3k9lJyTTB5WvQZv2rwRajK6xox5bCuTglTpaAKY85kCZqR54PITtbSIPwZW6Wn3d3jHKZkXrQZi4ckpPEN/L4g2VgajeHMybejGOg/4kM79t/AEVbt4m1v4OUCqvZ9DRWl0AgQH6VzWB0nyeb48n5en4u9+NWc8H7RPw3u7pDoTT9slrF2c+JMBdYZ+YaXYfRaFxenf4Tcojb+IapuzAAAAAASUVORK5CYII=">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mervin Website</title>
+    <script type="module" crossorigin src="/assets/index.26726063.js"></script>
+    <link rel="stylesheet" href="/assets/index.aad0c107.css">
+  </head>
+  <body>
+
+    <canvas id="bg"></canvas>   
+
+    <main>
+
+      <header>
+        <h1>Ing. Mervin Finol</h1>
+        <p>🚀 Bienvenidos a mi Página Web!</p>
+        <div style="text-align:right">
+          <a target="_blank" href="https://github.com/GodGambito" style="text-decoration:none">
+            <img src="/assets/github2.4835c7ae.png" alt="" width="60" height="60">            
+          </a>
+       
+          <a target="_blank" href="https://www.instagram.com/mervinfinol/" style="text-decoration:none">
+            <img src="/assets/instagram.bd9d1254.png" alt="" width="50" height="50">
+          </a>
+        
+          <a target="_blank" href="https://twitter.com/El_Barto05" style="text-decoration:none">
+            <img src="/assets/twitter.055b8a75.png" alt="" width="50" height="50">
+          </a>
+       
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=+56972693153&text=Gracias%20por%20Contactarme%20" style="text-decoration:none">
+            <img src="/assets/whatsapp.bfa2c513.png" alt="" width="50" height="50">
+          </a>
+        </div>
+      </header>
+
+
+      <blockquote>
+        <p>Algo bueno tiene que pasar!!!</p>
+      </blockquote>
+
+      <section>
+        <h2>📜 Resumen Profesional</h2>
+        <p>
+          Ingeniero en Computación en el área de Programación, Automatización, Redes y Telecomunicaciones, con más de veinte años
+            en el área.
+        </p>
+
+        <p>
+          Experto en Programación específicamente en Visual Basic, Java, JavaScript, PHP y SQL; así como en HTML, CSS, JQuery, Git, NodeJS, Laravel, React, Prestashop, MongoDB, Docker y AWS.
+        </p>
+
+      </section>
+
+      <section class="light">
+        <h2>👩🏽‍🚀 Proyectos</h2>
+                                   
+            <h2><a target="_blank" href="http://roensa.com/ssdv">Sistema SDV</a></h2>
+             
+              <h3>Pagina Privada de Solicitudes, entre el Scotiabank y la Imprenta</h3><small>Realizada en PHP</small>          
+      
+            <h2><a target="_blank" href="http://roensa.com">Roensa, S.A.</a></h2>
+             
+              <h3>Imprenta de Documentos Valorados</h3><small>Realizada en HTML5, CSS y JavaScript</small>          
+                      
+            <h2><a target="_blank" href="http://steward.cl">Steward</a></h2>
+            
+              <h3>Venta de Equipamiento Profesional en el sector Horeca</h3><small>Construida en Prestashop</small>                 
+            
+      </section>
+
+      <blockquote>
+        <p>Si buscas resultados distintos, no hagas siempre lo mismo <br>-Albert Einstein</p>
+      </blockquote>
+
+      <section class="left">
+        <h2>Experiencia Profesional</h2>
+
+        <h3>Steward</h3>
+        <p>
+          <spam>Ingeniero Programador Web<br>Ingeniero TI</spam>
+          <ul>Funciones del Cargo:</ul>
+          <li>Encargado del Ecommerce (Prestashop)</li>
+          <li>Creación de modulos para la Integracion con Dynamics AX</li>
+          <li>Programación en PHP, Mysql, Smarty, Javascript y Laravel</li>         
+          <li>Admnistración del C-Panel, Creación de Trabajos de Cron</li>
+        </p>
+        <h3>Roensa</h3>
+        <p>
+          <spam>Analista de Sistemas<br>Ingeniero TI</spam>
+          <ul>Funciones del Cargo:</ul>
+          <li>Programación en PHP, Javascript, Cobol, OpenVMS</li>
+          <li>Diseño, Creación e Implementación de Página de Pedidos Web para el Banco Scotiabank usando: PHP, JQuery,
+            JSON, Ajax y MySQL</li>
+          <li>Admnistración del C-Panel, E-Mails, Servidores y estaciones de trabajo (Win y Linux)</li>
+          <li>Automatización de los Procesos de Consulta de Ordenes usando <a target="_blank"
+              href="https://www.automationanywhere.com/" rel="noopener noreferrer"> Automation Anywhere</a></li>
+          <li>Automatización en la Recepción de Pedidos Bancarios usando NodeJs</li>
+        </p>
+        <h3>Anovo</h3>
+        <p>
+          <spam>Analista de Garantias <br> Automatización de Procesos</spam>
+          <ul>Funciones del Cargo:</ul>
+          <li>Automatización de las Ordenes de Trabajo </li>
+          <li>Reparación y Configuración de Equipos Técnologicos</li>
+          <li>Atención al Cliente</li>
+        </p>
+        <h3>Enlaces Data</h3>
+        <p>
+          <spam>Técnico Instalador</spam>
+          <ul>Funciones del Cargo:</ul>
+          <li>Diseño, Instalación y Configuración de Redes (UTP y FO)</li>
+          <li>Instalación y Armado de Racks, puntos de Red y APs</li>
+          <li>Levantamiento de Información</li>
+        </p>
+
+      </section>
+
+      <blockquote>
+        <p>Para que una Empresa funcione, tenemos que hacer lo que debemos, que no necesariamente es lo que nos gusta.
+          Y lo que nos gusta, le cambia con el tiempo a las mentes productivas...</p>
+      </blockquote>
+
+
+    </main>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
